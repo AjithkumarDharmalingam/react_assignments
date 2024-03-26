@@ -6,22 +6,29 @@ const NestedList = () => {
   const [nestedData, setNestedData] = useState([
     {
       id: 1,
-      name: "Folder 1",
+      name: "Users",
       children: [
         {
           id: 11,
-          name: "Folder 1.1",
+          name: "Guest",
           children: [
-            { id: 111, name: "Sub-child 1.1.1", children: [] },
-            { id: 112, name: "Sub-child 1.1.2", children: [] }
+            { id: 111, name: "Desktop", children: [] },
+            { id: 112, name: "Documents", children: [] },
+            { id: 113, name: "Downloads", children: [] },
+            { id: 114, name: "Movies", children: [] },
+            { id: 115, name: "Music", children: [] },
+            { id: 116, name: "Pictures", children: [] },
+            { id: 117, name: "Public", children: [] }
           ]
         },
         {
           id: 12,
-          name: "Folder 1.2",
+          name: "Admin",
           children: [
-            { id: 121, name: "Sub-child 1.2.1", children: [] },
-            { id: 122, name: "Sub-child 1.2.2", children: [] }
+            { id: 121, name: "App Data", children: [] },
+            { id: 122, name: "Local", children: [] },
+            { id: 123, name: "Program Files", children: [] },
+            { id: 122, name: "Program Data", children: [] }
           ]
         }
       ],
@@ -29,22 +36,28 @@ const NestedList = () => {
     },
     {
       id: 2,
-      name: "Folder 2",
+      name: "Gadgets",
       children: [
         {
           id: 21,
-          name: "Folder 2.1",
+          name: "Watchs",
           children: [
-            { id: 211, name: "Sub-child 2.1.1", children: [] },
-            { id: 212, name: "Sub-child 2.1.2", children: [] }
+            { id: 211, name: "Sonata", children: [] },
+            { id: 212, name: "Titan", children: [] },
+            { id: 213, name: "Fastrack", children: [] },
+            { id: 214, name: "HMT Watch", children: [] },
+            { id: 215, name: "Rolex", children: [] }
           ]
         },
         {
           id: 22,
-          name: "Folder 2.2",
+          name: "Mobiles",
           children: [
-            { id: 221, name: "Sub-child 2.2.1", children: [] },
-            { id: 222, name: "Sub-child 2.2.2", children: [] }
+            { id: 221, name: "Samsung", children: [] },
+            { id: 222, name: "Nokia", children: [] },
+            { id: 223, name: "Oppo", children: [] },
+            { id: 224, name: "Vivo", children: [] },
+            { id: 222, name: "Poco", children: [] }
           ]
         }
       ],
@@ -92,6 +105,7 @@ const NestedList = () => {
             <div onClick={() => toggleChildren(node)}>
               {node.name}
             </div>
+            <br />
             {node.isOpen && node.children && renderNestedList(node.children)}
           </li>
         )}

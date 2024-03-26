@@ -17,8 +17,8 @@ const Boxsplit = () => {
     ];
 
     setSquares(prevSquares => [
-      ...prevSquares.filter(sq => sq.id !== square.id),
-      ...newSquares
+      ...prevSquares,
+      ...newSquares.filter(sq => sq.id !== square.id)
     ]);
   };
 
@@ -28,7 +28,6 @@ const Boxsplit = () => {
         key={square.id}
         style={{
           position: "absolute",
-
           top: square.y,
           left: square.x,
           width: square.size,
